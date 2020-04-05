@@ -1,0 +1,28 @@
+# include <stdio.h>
+# include <cs50.h>
+
+bool valid_triangle (int a, int b, int c);
+
+int main (void)
+{
+
+    int x = get_int ("Type a number: ");
+    int y = get_int ("Type another number: ");
+    int z = get_int ("Type a third number: ");
+
+ valid_triangle ( x, y, z);
+
+}
+
+bool valid_triangle (int a, int b, int c)
+{
+    if ( a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && a + c > b)
+    {
+        printf ("With these numbers you CAN construct a valid triangle.\n");
+    }
+    else
+    {
+        printf("With these numbers you CANNOT construct a valid triangle. \n");
+    }
+    return 0;
+}
